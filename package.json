@@ -4,6 +4,11 @@
   "description": "bibliotheque med typescript",
   "main": "index.js",
   "scripts": {
+    "start": "lite-server",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prepublishOnly": "npm run build",
+    "prepare": "husky install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
