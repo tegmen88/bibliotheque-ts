@@ -68,3 +68,20 @@ Slutresultat
 Lista alla böcker: Visar böcker med information om titel, författare, förlag och målgrupp.
 Detaljvy: Klicka på en bok för att se mer information.
 Sökfunktion: Sök efter böcker via titel.
+
+
+
+Kan detta automatiseras?
+Ja! Det finns några sätt att undvika att manuellt lägga till .js i TypeScript-importer:
+
+1. Använd en bundler som Vite, Webpack eller Parcel
+En bundler hanterar importvägar automatiskt och sammanfogar moduler till en enda fil (eller ett fåtal filer). Då behöver du inte tänka på .js i dina importer.
+
+2. TypeScript-alternativ för Node.js (om serverbaserat)
+Om du bara kör i en Node.js-miljö, kan du använda "moduleResolution": "node" i din tsconfig.json. Men detta fungerar inte i webbläsaren utan en bundler.
+
+Slutsats
+Du behöver lägga till .js i importvägar i TypeScript för att möta webbläsarens krav på ES-moduler. Det är inte något TypeScript kräver, utan ett krav från webbläsarens modulladdare. Genom att använda en bundler kan du eliminera detta krav helt. 
+
+
+

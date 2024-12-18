@@ -39,11 +39,15 @@ function handleBookClick(bookId: number) {
 
 
 function handleSearch(query: string) {
+
   console.log('Search query:', query);
+
   const filteredBooks = books.filter(book =>
     book.title.toLowerCase().includes(query.toLowerCase())
   );
+
   console.log('Filtered books:', filteredBooks);
+
   renderBookList(filteredBooks, bookListContainer, handleBookClick);
 }
 
@@ -51,7 +55,9 @@ function handleSearch(query: string) {
 async function fetchBooks(): Promise<Book[]> {
   try {
     console.log('Fetching books from API...');
+
     const response = await fetch('https://my-json-server.typicode.com/zocom-christoffer-wallenberg/books-api/books');
+    
     console.log('API response:', response);
 
     if (!response.ok) {
