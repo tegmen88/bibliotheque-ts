@@ -1,0 +1,13 @@
+# Node.js
+node_modules/
+dist/
+.env
+
+# Logfiler
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Operativsystem-specifika filer
+.DS_Store
+Thumbs.db
